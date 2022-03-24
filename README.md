@@ -10,20 +10,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Installation
+## Deploying on production (using ports 80 for nginx and 3000 for json server)
 
-docker build -t angular . -f Dockerfile-angular (port80)
-docker build -t jsonserver . -f Dockerfile-jsonserver (port3000)
+docker-compose build
+docker-compose up
 
-version: 3
-services:
-  foo:
-    image: user/foo
-    build:
-      context: .../docks
-      dockerfile: foo.Dockerfile
-  bar:
-    image: user/bar
-    build:
-      context: .../docks
-      dockerfile: bar.Dockerfile
+## Access to application
+
+http://localhost

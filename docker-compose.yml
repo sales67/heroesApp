@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  angular:
+    build:
+      context: .
+      dockerfile: Dockerfile-angular
+    ports:
+      - "80:80"
+  jsonserver:
+    build:
+      context: .
+      dockerfile: Dockerfile-jsonserver
+    ports:
+      - "3000:80"
