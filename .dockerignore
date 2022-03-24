@@ -1,0 +1,13 @@
+.git
+
+.vscode
+
+.editorconfig
+
+/node_modules
+
+.gitignore
+
+*.zip
+
+*.md
