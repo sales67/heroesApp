@@ -1,24 +1,30 @@
-<p>add-hero works!</p>
-<form [formGroup]="addForm" (ngSubmit)="addHero(addForm.value.name)">
-  <mat-form-field appearance="legacy">
-    <mat-label>Hero name</mat-label>
-    <input formControlName="name" matInput placeholder="Cat woman" />
-  </mat-form-field>
-  <button
-    [disabled]="addForm.invalid"
-    mat-raised-button
-    color="primary"
-    class="submit"
-  >
-    Submit
-  </button>
-  <button
-    type="button"
-    mat-raised-button
-    color="basic"
-    class="submit"
-    routerLink="/hero"
-  >
-    Cancel
-  </button>
-</form>
+<mat-grid-list cols="1" rowHeight="100px">
+  <mat-grid-tile>
+    <div layout-align="center center">
+      <form [formGroup]="addForm" (ngSubmit)="addHero(addForm.value.name)">
+        <mat-form-field appearance="legacy">
+          <mat-label>Hero name</mat-label>
+          <input formControlName="name" matInput placeholder="Cat woman" />
+        </mat-form-field>
+        <button
+          mat-button
+          [disabled]="addForm.invalid"
+          mat-button
+          color="primary"
+          class="submit"
+        >
+          Submit
+        </button>
+        <button
+          type="button"
+          mat-button
+          color="basic"
+          class="submit"
+          routerLink="/hero"
+        >
+          Cancel
+        </button>
+      </form>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

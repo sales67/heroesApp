@@ -1,4 +1,4 @@
-<mat-grid-list cols="1" rowHeight="70px">
+<mat-grid-list cols="1" rowHeight="100px">
   <mat-grid-tile>
     <div layout-align="center center">
       <form [formGroup]="editForm" (ngSubmit)="editHero(editForm.value)">
@@ -23,7 +23,7 @@
         <button
           md-margin
           [disabled]="editForm.invalid"
-          mat-raised-button
+          mat-button
           color="primary"
           class="submit"
         >
@@ -31,7 +31,7 @@
         </button>
         <button
           type="button"
-          mat-raised-button
+          mat-button
           color="basic"
           class="button"
           routerLink="/hero"

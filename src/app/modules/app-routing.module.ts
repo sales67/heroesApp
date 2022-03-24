@@ -6,6 +6,11 @@ import { AppComponent } from '../app.component';
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
+    redirectTo: 'hero',
+  },
+  {
+    path: 'hero',
     loadChildren: () => import('./hero.module').then((m) => m.HeroModule),
   },
 ];
