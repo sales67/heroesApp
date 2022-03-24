@@ -7,43 +7,42 @@ import { HeroService } from 'src/app/services/hero.service';
 @Component({
   selector: 'app-edit-hero',
   templateUrl: './edit-hero.component.html',
-  styleUrls: ['./edit-hero.component.css']
+  styleUrls: ['./edit-hero.component.css'],
 })
 export class EditHeroComponent implements OnInit {
-
-  editForm!: FormGroup
-  id:any
+  editForm!: FormGroup;
+  id: any;
   hero!: Hero;
 
-  constructor(private formBuilder: FormBuilder,
+  constructor(
+    private formBuilder: FormBuilder,
     private service: HeroService,
     private router: Router,
-    private route: ActivatedRoute) {   
-      this.editForm = this.formBuilder.group({
-        id: ['',[Validators.required,Validators.pattern("^[0-9]*$")]],
-        name: ['',Validators.required]
-    })
-    this.editForm.valueChanges.subscribe(data => {
+    private route: ActivatedRoute
+  ) {
+    this.editForm = this.formBuilder.group({
+      id: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
+      name: ['', Validators.required],
+    });
+    this.editForm.valueChanges.subscribe((data) => {
       this.hero = data;
-    })
+    });
     this.id = this.route.snapshot.paramMap.get('id');
   }
 
-  ngOnInit(): void {    
-    this.getHero();       
+  ngOnInit(): void {
+    this.getHero();
   }
 
-  getHero(){
-    this.service.getHeroById(this.id).subscribe(
-      data => {
-        this.editForm.setValue(data)
-      }
-    )
+  getHero() {
+    this.service.getHeroById(this.id).subscribe((data) => {
+      this.editForm.setValue(data);
+    });
   }
 
-  editHero(hero:Hero){
-    this.service.editHero(hero).subscribe(data =>{
-      this.router.navigate(["/hero"])
-    })
+  editHero(hero: Hero) {
+    this.service.editHero(hero).subscribe((data) => {
+      this.router.navigate(['/hero']);
+    });
   }
 }

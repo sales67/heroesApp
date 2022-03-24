@@ -22,27 +22,26 @@ import { DeleteDialog } from '../dialogs/delete-dialog';
 
 const routes: Routes = [
   {
-  path: '',
-  pathMatch: 'full',
-  component: DashboardHeroesComponent,  
+    path: '',
+    pathMatch: 'full',
+    component: DashboardHeroesComponent,
   },
   {
     path: 'add',
-    component: AddHeroComponent
+    component: AddHeroComponent,
   },
   {
     path: 'edit/:id',
-    component: EditHeroComponent
-  }
+    component: EditHeroComponent,
+  },
 ];
-
 
 @NgModule({
   declarations: [
     DashboardHeroesComponent,
     AddHeroComponent,
     EditHeroComponent,
-    DeleteDialog
+    DeleteDialog,
   ],
   imports: [
     NgxPaginationModule,
@@ -57,7 +56,7 @@ const routes: Routes = [
     MatButtonModule,
     MatGridListModule,
     MatCheckboxModule,
-    MatDialogModule
-  ]
+    MatDialogModule,
+  ],
 })
-export class HeroModule { }
+export class HeroModule {}

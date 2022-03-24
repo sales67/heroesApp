@@ -5,15 +5,13 @@ import { AppComponent } from '../app.component';
 
 const routes: Routes = [
   {
-  path: '',
-  loadChildren: () => import('./hero.module').then(m => m.HeroModule)
-  }
+    path: '',
+    loadChildren: () => import('./hero.module').then((m) => m.HeroModule),
+  },
 ];
 
 @NgModule({
   declarations: [],
-  imports: [    
-    RouterModule.forRoot(routes),
-  ]
+  imports: [RouterModule.forRoot(routes)],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

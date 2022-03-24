@@ -9,13 +9,9 @@ describe('EditHeroComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        HeroModule,
-        AppModule
-      ],
-      declarations: [ EditHeroComponent ]
-    })
-    .compileComponents();
+      imports: [HeroModule, AppModule],
+      declarations: [EditHeroComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -25,32 +21,32 @@ describe('EditHeroComponent', () => {
   });
 
   it('Component is created', () => {
-    expect(component).toBeTruthy()
+    expect(component).toBeTruthy();
   });
 
   it('Form is invalid (invalid name)', () => {
     let name = component.editForm.controls['name'];
     let id = component.editForm.controls['id'];
-    name.setValue('')
-    id.setValue(1)
+    name.setValue('');
+    id.setValue(1);
 
-    expect(component.editForm.invalid).toBeTruthy()
+    expect(component.editForm.invalid).toBeTruthy();
   });
 
   it('Form is invalid (invalid id)', () => {
     let name = component.editForm.controls['name'];
     let id = component.editForm.controls['id'];
-    name.setValue('TestHeroeName')
-    id.setValue('string')
+    name.setValue('TestHeroeName');
+    id.setValue('string');
 
-    expect(component.editForm.invalid).toBeTruthy()
+    expect(component.editForm.invalid).toBeTruthy();
   });
 
   it('Form is valid', () => {
     let name = component.editForm.controls['name'];
     let id = component.editForm.controls['id'];
-    name.setValue('TestHeroeName')
-    id.setValue(1)
+    name.setValue('TestHeroeName');
+    id.setValue(1);
 
     expect(component.editForm.valid).toBeTruthy();
   });

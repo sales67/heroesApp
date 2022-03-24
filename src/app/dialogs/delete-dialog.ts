@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'delete-dialog',
-    templateUrl: 'delete-dialog.html',
-  })
-  export class DeleteDialog {}
+  selector: 'delete-dialog',
+  templateUrl: 'delete-dialog.html',
+})
+export class DeleteDialog {}

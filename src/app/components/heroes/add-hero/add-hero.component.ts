@@ -7,28 +7,28 @@ import { HeroService } from 'src/app/services/hero.service';
 @Component({
   selector: 'app-add-hero',
   templateUrl: './add-hero.component.html',
-  styleUrls: ['./add-hero.component.css']
+  styleUrls: ['./add-hero.component.css'],
 })
 export class AddHeroComponent implements OnInit {
+  addForm!: FormGroup;
+  hero: string = '';
 
-  addForm!: FormGroup
-  hero:string = "";
-
-  constructor(private formBuilder: FormBuilder,
+  constructor(
+    private formBuilder: FormBuilder,
     private service: HeroService,
-    private router: Router) {
+    private router: Router
+  ) {
     this.addForm = this.formBuilder.group({
-      name: ['',Validators.required]
-    })
+      name: ['', Validators.required],
+    });
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  addHero(name:string){
-    this.service.addHero(name).subscribe(data =>{
+  addHero(name: string) {
+    this.service.addHero(name).subscribe((data) => {
       this.hero = data.name;
-      this.router.navigate(["/hero"])
-    })
+      this.router.navigate(['/hero']);
+    });
   }
 }
