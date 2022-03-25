@@ -12,8 +12,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Deploying on production (using ports 80 for nginx and 3000 for json server)
 
-docker-compose build
-docker-compose up
+docker-compose build.
+
+docker-compose up.
 
 ## Access to application
 

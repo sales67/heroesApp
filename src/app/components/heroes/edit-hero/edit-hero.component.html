@@ -2,11 +2,11 @@
   <mat-grid-tile>
     <div layout-align="center center">
       <form [formGroup]="editForm" (ngSubmit)="editHero(editForm.value)">
-        <mat-form-field appearance="legacy">
+        <mat-form-field>
           <mat-label>ID: </mat-label>
           <input type="number" matInput disabled value="{{ editForm.value.id }}" />
         </mat-form-field>
-        <mat-form-field appearance="legacy">
+        <mat-form-field>
           <mat-label>Hero name</mat-label>
           <input [value]="editForm.value.name | titlecase" type="text" formControlName="name" matInput
             placeholder="Cat woman" />
