@@ -9,6 +9,8 @@ import { EditHeroComponent } from '../components/heroes/edit-hero/edit-hero.comp
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { DeleteDialog } from '../dialogs/delete-dialog';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -18,7 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DeleteDialog } from '../dialogs/delete-dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const routes: Routes = [
   {
@@ -57,6 +59,7 @@ const routes: Routes = [
     MatGridListModule,
     MatCheckboxModule,
     MatDialogModule,
+    MatProgressSpinnerModule,
   ],
 })
 export class HeroModule {}

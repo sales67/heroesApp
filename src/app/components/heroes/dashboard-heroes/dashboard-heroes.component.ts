@@ -13,6 +13,7 @@ import { DeleteDialog } from 'src/app/dialogs/delete-dialog';
   styleUrls: ['./dashboard-heroes.component.css'],
 })
 export class DashboardHeroesComponent implements OnInit {
+  loaded = false;
   displayedColumns: string[] = ['id', 'name', 'edit', 'delete'];
   dataSource: MatTableDataSource<Hero>;
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
@@ -31,6 +32,7 @@ export class DashboardHeroesComponent implements OnInit {
     this.service.getHeroes().subscribe((data) => {
       this.dataSource.data = data;
       this.dataSource.paginator = this.paginator;
+      this.loaded = true;
     });
   }
 
@@ -44,8 +46,10 @@ export class DashboardHeroesComponent implements OnInit {
   }
 
   deleteHero(id: number) {
+    this.loaded = false;
     this.service.deleteHero(id).subscribe((data) => {
       this.getHeroes();
+      this.loaded = true;
     });
   }
 

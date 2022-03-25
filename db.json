@@ -1,32 +1,96 @@
 {
   "heroes": [
     {
-      "name": "test",
+      "name": "Aquaman",
       "id": 1
     },
     {
-      "name": "resrt",
+      "name": "Batman",
       "id": 2
     },
     {
-      "name": "aaa",
+      "name": "Cat Woman",
+      "id": 3
+    },
+    {
+      "name": "Daredevil",
+      "id": 4
+    },
+    {
+      "name": "The Defenders",
       "id": 5
     },
     {
-      "name": "wseqw",
+      "name": "Iron Man",
       "id": 6
     },
     {
-      "name": "ddas",
+      "name": "Spider-man",
       "id": 7
     },
     {
-      "name": "432",
+      "name": "Supergirl",
       "id": 8
     },
     {
-      "name": "eqwe",
+      "name": "Thor",
       "id": 9
+    },
+    {
+      "name": "Wolverine",
+      "id": 10
+    },
+    {
+      "name": "Wonder Woman",
+      "id": 11
+    },
+    {
+      "name": "X-men",
+      "id": 12
+    },
+    {
+      "name": "Zatara",
+      "id": 13
+    },
+    {
+      "name": "Watchmen",
+      "id": 14
+    },
+    {
+      "name": "Robin",
+      "id": 15
+    },
+    {
+      "name": "Hulk",
+      "id": 16
+    },
+    {
+      "name": "Deadpool",
+      "id": 17
+    },
+    {
+      "name": "Hellboy",
+      "id": 18
+    },
+    {
+      "name": "Fantastic Four",
+      "id": 19
+    },
+    {
+      "name": "Guardians Of The Galaxy",
+      "id": 20
+    },
+    {
+      "name": "Green Arrow",
+      "id": 21
+    },
+    {
+      "name": "Doctor Strange",
+      "id": 22
+    },
+    {
+      "name": "Black Panter",
+      "id": 23
     }
   ]
 }

@@ -4,24 +4,12 @@
       <form [formGroup]="addForm" (ngSubmit)="addHero(addForm.value.name)">
         <mat-form-field appearance="legacy">
           <mat-label>Hero name</mat-label>
-          <input formControlName="name" matInput placeholder="Cat woman" />
+          <input [value]="addForm.value.name | titlecase" formControlName="name" matInput placeholder="Cat woman" />
         </mat-form-field>
-        <button
-          mat-button
-          [disabled]="addForm.invalid"
-          mat-button
-          color="primary"
-          class="submit"
-        >
+        <button mat-button [disabled]="addForm.invalid" mat-button color="primary" class="submit">
           Submit
         </button>
-        <button
-          type="button"
-          mat-button
-          color="basic"
-          class="submit"
-          routerLink="/hero"
-        >
+        <button type="button" mat-button color="basic" class="submit" routerLink="/hero">
           Cancel
         </button>
       </form>

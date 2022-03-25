@@ -4,38 +4,17 @@
       <form [formGroup]="editForm" (ngSubmit)="editHero(editForm.value)">
         <mat-form-field appearance="legacy">
           <mat-label>ID: </mat-label>
-          <input
-            type="number"
-            matInput
-            disabled
-            value="{{ editForm.value.id }}"
-          />
+          <input type="number" matInput disabled value="{{ editForm.value.id }}" />
         </mat-form-field>
         <mat-form-field appearance="legacy">
           <mat-label>Hero name</mat-label>
-          <input
-            type="text"
-            formControlName="name"
-            matInput
-            placeholder="Cat woman"
-          />
+          <input [value]="editForm.value.name | titlecase" type="text" formControlName="name" matInput
+            placeholder="Cat woman" />
         </mat-form-field>
-        <button
-          md-margin
-          [disabled]="editForm.invalid"
-          mat-button
-          color="primary"
-          class="submit"
-        >
+        <button md-margin [disabled]="editForm.invalid" mat-button color="primary" class="submit">
           Submit
         </button>
-        <button
-          type="button"
-          mat-button
-          color="basic"
-          class="button"
-          routerLink="/hero"
-        >
+        <button type="button" mat-button color="basic" class="button" routerLink="/hero">
           Cancel
         </button>
       </form>
